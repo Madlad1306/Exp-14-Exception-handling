@@ -1,0 +1,33 @@
+//write a code to handle exception created by divide 0 error
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    float num, den, div;
+    cout << "Enter numerator: ";
+    cin >> num;
+    cout << "Enter denominator: ";
+    cin >> den;
+    try{
+        if(den == 0) {
+            throw den;
+
+        }
+        else{
+            div = num/den;
+            cout << "Division is: " << div << endl;
+        }
+
+    }
+    catch(float e) {
+        cout << "Division by zero is not possible." << endl;
+}
+}
+
+
+
+//Expected Output
+Enter numerator: 5
+Enter denominator: 0
+Division by zero is not possible.
